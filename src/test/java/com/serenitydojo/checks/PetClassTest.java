@@ -2,9 +2,6 @@ package com.serenitydojo.checks;
 
 import org.junit.Test;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PetClassTest {
@@ -22,4 +19,5 @@ public class PetClassTest {
     public void shouldHaveAnAge() throws Exception {
         assertThat(Class.forName("com.serenitydojo.Pet").getDeclaredField("age").getGenericType()).isEqualTo(int.class);
     }
+
 }

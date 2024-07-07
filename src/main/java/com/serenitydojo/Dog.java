@@ -1,25 +1,14 @@
 package com.serenitydojo;
 
-public class Dog {
-    private String name;
+public class Dog extends Pet{
     private String favoriteToy;
-    private int age;
     private boolean isFed = false;
 
     public static final String DOG_NOISE = "Woof";
 
     public Dog(String name, String favoriteToy, int age) {
-        this.name = name;
+        super(name, age);
         this.favoriteToy = favoriteToy;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getFavoriteToy() {
@@ -30,22 +19,20 @@ public class Dog {
         this.favoriteToy = favoriteToy;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public boolean isFed() {
         return isFed;
     }
 
     // Exercise 4
+    @Override
     public String makeNoise() {return DOG_NOISE;}
 
     public void feed() {
         this.isFed = true;
+    }
+
+    @Override
+    public String play() {
+        return ("plays with " + favoriteToy);
     }
 }

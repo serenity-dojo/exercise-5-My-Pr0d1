@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class WhenCreatingObjects {
+public class WhenCreatingObjectsTest {
     @Test
     public void creating_a_dog() {
         Dog fido = new Dog("Fido","Bone", 5);
@@ -19,9 +19,8 @@ public class WhenCreatingObjects {
     public void whenADogBarks() {
         Dog fido = new Dog("Fido","Bone", 5);
 
-        String dogSound = "";
         // TODO: implement a method in the Dog sound called makeNoise() that returns the sound a dog makes: "Woof", e.g.
-        dogSound = fido.makeNoise();
+        String dogSound = fido.makeNoise();
 
         Assert.assertEquals(dogSound, "Woof");
     }
@@ -40,13 +39,13 @@ public class WhenCreatingObjects {
     @Test
     public void whenAnimalsPlay() {
 // TODO: Uncomment me
-//
-//        Pet fido = new Dog("Fido","Bone", 5);
-//        Pet spot = new Cat("Spot","String", 5);
-//        Pet hazel = new Hamster("Hazel", 1, "Wheel");
-//
-//        assertThat(fido.play(), equalTo("plays with bone"));
-//        assertThat(spot.play(), equalTo("plays with string"));
-//        assertThat(hazel.play(), equalTo("runs in wheel"));
+
+        Pet fido = new Dog("Fido","Bone", 5);
+        Pet spot = new Cat("Spot","String", 5);
+        Pet hazel = new Hampster("Hazel", "Wheel", 1);
+
+        assertThat(fido.play(), equalTo("plays with bone"));
+        assertThat(spot.play(), equalTo("plays with string"));
+        assertThat(hazel.play(), equalTo("runs in wheel"));
     }
 }
